@@ -1,5 +1,4 @@
 from flask import Flask, session, render_template, request
-
 import os
 import swimclub
 
@@ -56,7 +55,7 @@ def display_swimmers_files():
 @app.post("/showbarchart")
 def show_bar_chart():
     file_id = request.form["file"]
-    location = swimclub.produce_bar_chart(file_id, "webapp-chapter6\webapp\\templates\\")
+    location = swimclub.produce_bar_chart(file_id, "chapter7\webapp\\templates\\")
     return render_template(location.split("\\")[-1])
 
 
